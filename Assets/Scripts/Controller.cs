@@ -22,7 +22,6 @@ public class Controller : MonoBehaviour
 
     Renderer rend;
 
-    //Build
     Vector3 initialPosition;
 
     void Start()
