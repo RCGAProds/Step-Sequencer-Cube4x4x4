@@ -15,8 +15,9 @@ public class CameraMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Movement();
+            Movement();  // prueba 
         }
+
     }
     void Movement()
     {
