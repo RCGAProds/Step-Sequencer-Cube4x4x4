@@ -73,31 +73,37 @@ public class Controller : MonoBehaviour
         if (Physics.Raycast(ray[0], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveUp = true;
+            Debug.Log("CanMoveUp");
         }
         else { canMoveUp = false; }
         if (Physics.Raycast(ray[1], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveRight = true;
+            Debug.Log("CanMoveRight");
         }
         else { canMoveRight = false; }
         if (Physics.Raycast(ray[2], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveDown = true;
+            Debug.Log("CanMoveDown");
         }
         else { canMoveDown = false; }
         if (Physics.Raycast(ray[3], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveLeft = true;
+            Debug.Log("CanMoveLeft");
         }
         else { canMoveLeft = false; }
         if (Physics.Raycast(ray[4], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveIn = true;
+            Debug.Log("CanMoveIn");
         }
         else { canMoveIn = false; }
         if (Physics.Raycast(ray[5], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveOut = true;
+            Debug.Log("CanMoveOut");
         }
         else { canMoveOut = false; }
 
@@ -120,17 +126,17 @@ public class Controller : MonoBehaviour
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.D) && canMoveRight)
+        if (Input.GetKey(KeyCode.D) && canMoveLeft)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.left * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S) && canMoveDown)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A) && canMoveLeft)
+        if (Input.GetKey(KeyCode.A) && canMoveRight)
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.Q) && canMoveIn)
         {
