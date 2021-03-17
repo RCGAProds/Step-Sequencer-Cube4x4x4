@@ -22,6 +22,8 @@ public class Controller : MonoBehaviour
 
     Renderer rend;
 
+    Vector3 initialPosition;
+
     void Start()
     {
         ray[0].direction = transform.up;
@@ -32,6 +34,8 @@ public class Controller : MonoBehaviour
         ray[5].direction = -transform.forward;
 
         rend = GetComponent<Renderer>();
+
+        initialPosition = transform.position;
     }
 
     void Update()
@@ -40,6 +44,15 @@ public class Controller : MonoBehaviour
         {
             Detect();
             Controls();
+        }
+
+        if (initialPosition == transform.position)
+        {
+            GameManager.gM.canBuild = false;
+        }
+        else
+        {
+            GameManager.gM.canBuild = true;
         }
 
         //switch (transform.position)
