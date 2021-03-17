@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) // kbhjkvgckgckghckhg
+        if (Input.GetKey(KeyCode.Space))
         {
             Movement();
         }
