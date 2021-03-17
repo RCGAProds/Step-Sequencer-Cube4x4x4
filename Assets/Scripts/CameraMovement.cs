@@ -15,10 +15,10 @@ public class CameraMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Movement();  // prueba 
+            Movement();
         }
-
     }
+    
     void Movement()
     {
         float movH = Input.GetAxis("Mouse X");
