@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{53EB68DC-EC65-FEA3-34AD-E3DCC75094BB}</ProjectGuid>
+    <ProjectGuid>{21EDD2E4-789C-84B6-E41A-1AC1A3750A4F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -598,31 +598,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.22f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/cgaga/Desktop/Practicas/CuboSonidos/Unity/Cubo4x4x4/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/cgaga/Documents/GitHub/Cube4x4x4/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
