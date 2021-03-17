@@ -18,6 +18,7 @@ public class CameraMovement : MonoBehaviour
             Movement();
         }
     }
+    
     void Movement()
     {
         float movH = Input.GetAxis("Mouse X");

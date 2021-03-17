@@ -6,8 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gM;
 
-    //[HideInInspector]
+    [HideInInspector]
     public GameObject controllerSelected;
+    public bool canBuild;
 
     void Start()
     {

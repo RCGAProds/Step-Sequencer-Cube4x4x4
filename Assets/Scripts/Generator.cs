@@ -7,7 +7,7 @@ public class Generator : MonoBehaviour
 
     public void SpawnController ()
     {
-        if(Time.timeScale == 1)
+        if(Time.timeScale == 1 && GameManager.gM.canBuild)
         {
             Instantiate(prefabBall, spawnPoint.position, spawnPoint.rotation);
         }
