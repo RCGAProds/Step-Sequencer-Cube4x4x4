@@ -110,7 +110,7 @@ MonoBehaviour:
   layerRaycast:
     serializedVersion: 2
     m_Bits: 256
-  speed: 5
+  speed: 1.5
   isSelected: 0
   unSelectedMat: {fileID: 2100000, guid: b3c24505629022747b709b3bd5110247, type: 2}
   selectedMat: {fileID: 2100000, guid: f233bd84ca9f2ec4292c1e2daddc1859, type: 2}

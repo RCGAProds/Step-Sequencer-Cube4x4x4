@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour
         //}
     }
 
-    private void Detect()
+    private void Detect() //Detect if the raycast are hitting a edge
     {
         for (int i = 0; i < ray.Length; i++)
         {
@@ -73,44 +73,38 @@ public class Controller : MonoBehaviour
         if (Physics.Raycast(ray[0], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveUp = true;
-            Debug.Log("CanMoveUp");
         }
         else { canMoveUp = false; }
         if (Physics.Raycast(ray[1], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveRight = true;
-            Debug.Log("CanMoveRight");
         }
         else { canMoveRight = false; }
         if (Physics.Raycast(ray[2], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveDown = true;
-            Debug.Log("CanMoveDown");
         }
         else { canMoveDown = false; }
         if (Physics.Raycast(ray[3], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveLeft = true;
-            Debug.Log("CanMoveLeft");
         }
         else { canMoveLeft = false; }
         if (Physics.Raycast(ray[4], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveIn = true;
-            Debug.Log("CanMoveIn");
         }
         else { canMoveIn = false; }
         if (Physics.Raycast(ray[5], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveOut = true;
-            Debug.Log("CanMoveOut");
         }
         else { canMoveOut = false; }
 
         DebugRay();
     }
 
-    void DebugRay()
+    void DebugRay() //Show the raycast
     {
         Debug.DrawRay(ray[0].origin, ray[0].direction, Color.red);
         Debug.DrawRay(ray[1].origin, ray[1].direction, Color.red);
@@ -120,7 +114,7 @@ public class Controller : MonoBehaviour
         Debug.DrawRay(ray[5].origin, ray[5].direction, Color.red);
     }
 
-    private void Controls()
+    private void Controls() //Inputs + Movement
     {
         if (Input.GetKey(KeyCode.W) && canMoveUp)
         {
@@ -148,13 +142,13 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void Click()
+    public void Click() //Controller Selected
     {
         isSelected = true;
         rend.material = selectedMat;
         GameManager.gM.controllerSelected = this.gameObject;
     }
-    public void UnClick()
+    public void UnClick() //Controller Unselected
     {
         isSelected = false;
         rend.material = unSelectedMat;
