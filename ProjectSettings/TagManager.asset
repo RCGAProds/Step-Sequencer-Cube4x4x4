@@ -12,6 +12,8 @@ TagManager:
   - F2
   - F3
   - F4
+  - C5
+  - F5
   layers:
   - Default
   - TransparentFX
