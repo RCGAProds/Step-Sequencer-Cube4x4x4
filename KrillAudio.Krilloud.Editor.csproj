@@ -278,11 +278,11 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Pablo/Documents/GitHub/Cube4x4x4/Assets/Krilloud/Runtime/Plugins/Newtonsoft.Json/net35/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="KrilloudSerial">
       <HintPath>C:/Users/Pablo/Documents/GitHub/Cube4x4x4/Assets/Krilloud/Editor/KrilloudSerial.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/Pablo/Documents/GitHub/Cube4x4x4/Assets/Krilloud/Runtime/Plugins/Newtonsoft.Json/net35/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Pablo/Documents/GitHub/Cube4x4x4/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
