@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-1.5206223726272584,"y":0.8751537203788757,"z":1.5864932537078858},"rotation":{"x":0.2636764347553253,"y":-0.14545346796512605,"z":0.04025549441576004,"w":0.9527324438095093},"size":2.6580111980438234,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-1.6014530658721924,"y":0.8862441778182983,"z":0.4380289316177368},"rotation":{"x":0.07555060088634491,"y":0.15048030018806458,"z":-0.011533441953361035,"w":0.9856588244438171},"size":2.356796979904175,"orthographic":true}
+>>>>>>> Carlos
