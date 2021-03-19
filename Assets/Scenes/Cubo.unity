@@ -1297,6 +1297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cubo_4x4x4
       objectReference: {fileID: 0}
+    - target: {fileID: 9051119940823146797, guid: b55ebbbed288066479889de6bf971dc1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.765
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b55ebbbed288066479889de6bf971dc1, type: 3}
 --- !u!4 &160893284 stripped

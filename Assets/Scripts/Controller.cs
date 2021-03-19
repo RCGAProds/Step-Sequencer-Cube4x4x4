@@ -27,9 +27,9 @@ public class Controller : MonoBehaviour
 
     private KLAudioSource kl;
 
-    [KLVariable] public string Columna;
-    [KLVariable] public string Instrumento;
-    [KLVariable] public string sonido;
+    [KLVariable] public string kl_Variable;
+    [KLVariable] public string kl_Variable2;
+    [KLVariable] public string kl_Variable3;
 
     void Start()
     {
@@ -171,34 +171,35 @@ public class Controller : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Vertex1":
-
+                kl.SetIntVar(kl_Variable, 0); // seleciona la variable de los vertices en krilloud
                 Debug.Log("Vertex1");
                 switch (collision.transform.parent.tag)
                 {
 
                     case "C1":
                         Debug.Log("C1");
+                        kl.SetIntVar(kl_Variable, 0);// seleciona la variable de la columna en krilloud
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);// seleciona la variable de la fila en krilloud
                                 break;        
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -210,22 +211,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -237,22 +238,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -264,22 +265,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -291,22 +292,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -326,22 +327,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -353,22 +354,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -380,22 +381,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -407,22 +408,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -434,22 +435,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -469,22 +470,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -496,22 +497,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -523,22 +524,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -550,22 +551,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -577,22 +578,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -612,22 +613,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -639,22 +640,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -666,22 +667,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -693,22 +694,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -720,22 +721,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -755,22 +756,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -782,22 +783,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -809,22 +810,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -836,22 +837,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
@@ -863,22 +864,22 @@ public class Controller : MonoBehaviour
                         {
                             case "F1":
                                 Debug.Log("F1");
-                                kl.SetIntVar(sonido, 0);
+                                kl.SetIntVar(kl_Variable, 0);
                                 break;
                             case "F2":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F2");
                                 break;
                             case "F3":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F3");
                                 break;
                             case "F4":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F4");
                                 break;
                             case "F5":
-                                kl.SetIntVar(sonido, 1);
+                                kl.SetIntVar(kl_Variable, 1);
                                 Debug.Log("F5");
                                 break;
                         }
