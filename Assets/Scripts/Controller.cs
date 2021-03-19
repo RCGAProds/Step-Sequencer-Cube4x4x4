@@ -25,6 +25,7 @@ public class Controller : MonoBehaviour
 
     Vector3 initialPosition;
 
+    [Header("Krilloud Settings")]
     private KLAudioSource kl;
 
     [KLVariable] public string Columna;
@@ -35,6 +36,7 @@ public class Controller : MonoBehaviour
     {
         kl = GetComponent<KLAudioSource>();
 
+        //Raycast Setup
         ray[0].direction = transform.up;
         ray[1].direction = transform.right;
         ray[2].direction = -transform.up;
@@ -63,16 +65,9 @@ public class Controller : MonoBehaviour
         {
             GameManager.gM.canBuild = true;
         }
-
-        //switch (transform.position)
-        //{
-        //    case Vector3 (0.5f,1f,1.5f):
-        //        //Activar Sonido
-        //        break;
-        //}
     }
 
-    private void Detect() //Detect if the raycast are hitting a edge
+    private void Detect() //Detecta si está en un vertice o en una línea para poder moverse.
     {
         for (int i = 0; i < ray.Length; i++)
         {
@@ -110,10 +105,10 @@ public class Controller : MonoBehaviour
         }
         else { canMoveOut = false; }
 
-        DebugRay();
+        //DebugRay();
     }
 
-    void DebugRay() //Show the raycast
+    void DebugRay() //Muestra el raycast por pantalla
     {
         Debug.DrawRay(ray[0].origin, ray[0].direction, Color.red);
         Debug.DrawRay(ray[1].origin, ray[1].direction, Color.red);
@@ -123,7 +118,7 @@ public class Controller : MonoBehaviour
         Debug.DrawRay(ray[5].origin, ray[5].direction, Color.red);
     }
 
-    private void Controls() //Inputs + Movement
+    private void Controls() //Define como se va a mover el controlador
     {
         if (Input.GetKey(KeyCode.W) && canMoveUp)
         {
@@ -151,35 +146,32 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void Click() //Controller Selected
+    public void Click() //Envia si el controlador está seleccionado
     {
         isSelected = true;
         rend.material = selectedMat;
         GameManager.gM.controllerSelected = this.gameObject;
     }
-    public void UnClick() //Controller Unselected
+
+    public void UnClick() //Envia si el controlador NO está seleccionado
     {
         isSelected = false;
         rend.material = unSelectedMat;
         GameManager.gM.controllerSelected = null;
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision) 
     {
-
-
-        switch (collision.gameObject.tag)
+        switch (collision.gameObject.tag) //Identifica qué vertice está tocando
         {
             case "Vertex1":
-
                 Debug.Log("Vertex1");
-                switch (collision.transform.parent.tag)
+                switch (collision.transform.parent.tag) //Identifica en qué columna está dicho vertice
                 {
-
                     case "C1":
                         Debug.Log("C1");
                         GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag)
+                        switch (parent1.transform.parent.tag) //Idenfitica en qué fila está dicho vertice
                         {
                             case "F1":
                                 Debug.Log("F1");
