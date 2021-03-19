@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour
         //}
     }
 
-    private void Detect()
+    private void Detect() //Detect if the raycast are hitting a edge
     {
         for (int i = 0; i < ray.Length; i++)
         {
@@ -104,7 +104,7 @@ public class Controller : MonoBehaviour
         DebugRay();
     }
 
-    void DebugRay()
+    void DebugRay() //Show the raycast
     {
         Debug.DrawRay(ray[0].origin, ray[0].direction, Color.red);
         Debug.DrawRay(ray[1].origin, ray[1].direction, Color.red);
@@ -114,23 +114,23 @@ public class Controller : MonoBehaviour
         Debug.DrawRay(ray[5].origin, ray[5].direction, Color.red);
     }
 
-    private void Controls()
+    private void Controls() //Inputs + Movement
     {
         if (Input.GetKey(KeyCode.W) && canMoveUp)
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.D) && canMoveRight)
+        if (Input.GetKey(KeyCode.D) && canMoveLeft)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.left * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S) && canMoveDown)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A) && canMoveLeft)
+        if (Input.GetKey(KeyCode.A) && canMoveRight)
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.Q) && canMoveIn)
         {
@@ -142,13 +142,13 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void Click()
+    public void Click() //Controller Selected
     {
         isSelected = true;
         rend.material = selectedMat;
         GameManager.gM.controllerSelected = this.gameObject;
     }
-    public void UnClick()
+    public void UnClick() //Controller Unselected
     {
         isSelected = false;
         rend.material = unSelectedMat;
