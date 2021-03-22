@@ -5,10 +5,10 @@ using UnityEngine;
 public class SelectController : MonoBehaviour
 {
     [SerializeField]
-    private LayerMask clickable;
+    private LayerMask controllersClickable;
+    private LayerMask buttonsClickable;
 
     private List<GameObject> selectedObjects;
-
 
     private void Start()
     {
@@ -22,18 +22,18 @@ public class SelectController : MonoBehaviour
 
     public void Select()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) //Si se hace CLICK
         {
             RaycastHit rayHit;
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),
-                out rayHit, Mathf.Infinity, clickable))
+                out rayHit, Mathf.Infinity, controllersClickable)) //Si se clickea un controlador clickeable
             {
                 Controller controllerScript = rayHit.collider.GetComponent<Controller>();
 
-                if (controllerScript != null)
+                if (controllerScript != null) //Si tiene el script Controller
                 {
-                    if (controllerScript.isSelected == false)
+                    if (controllerScript.isSelected == false) //Si no está seleccionado
                     {
                         foreach (GameObject obj in selectedObjects)
                         {
@@ -48,9 +48,9 @@ public class SelectController : MonoBehaviour
                         rayHit.collider.GetComponent<Controller>().Click();
                         controllerScript.isSelected = true;
                     }
-                    else
+                    else //Si está seleccionado
                     {
-                        if (selectedObjects.Count > 0)
+                        if (selectedObjects.Count > 0) //Si hay algo más seleccionado
                         {
                             foreach (GameObject obj in selectedObjects)
                             {
@@ -68,9 +68,14 @@ public class SelectController : MonoBehaviour
                     }
                 }
             }
-            else
+            else if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),
+                out rayHit, Mathf.Infinity, buttonsClickable)) //Si se clickea un botón clickeable
             {
-                if (selectedObjects.Count > 0)
+                return;
+            }
+            else //Si no se clickea nada
+            {
+                if (selectedObjects.Count > 0) //Si hay algo seleccionado
                 {
                     foreach (GameObject obj in selectedObjects)
                     {
