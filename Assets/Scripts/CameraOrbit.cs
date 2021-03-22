@@ -5,12 +5,11 @@ public class CameraOrbit : MonoBehaviour
     protected Transform _XForm_Camera;
     protected Transform _XForm_Parent;
 
-
     protected Vector3 _LocalRotation;
-    protected float _CameraDistance = 5f;
+    protected float _CameraDistance = 6f;
 
     [Header("Camera Settings")]
-    public float mouseSensitivity = 4f;
+    public float mouseSensitivity = 2f;
     public float scrollSensitivity = 2f;
     public float orbitDampening = 10f;
     public float scrollDampening = 6f;
@@ -24,7 +23,7 @@ public class CameraOrbit : MonoBehaviour
     }
 
     //Late Update is called once per frame, after Update() on every game object in the scene.
-    void Update()
+    void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -36,8 +35,8 @@ public class CameraOrbit : MonoBehaviour
             //Rotation based on Mouse Coordinates
             if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
             {
-                _LocalRotation.x += Input.GetAxis("Mouse X") * mouseSensitivity;
-                _LocalRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+                _LocalRotation.x -= Input.GetAxis("Mouse X") * mouseSensitivity;
+                _LocalRotation.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
 
                 //Clamp the y Rotation to horizon and not flipping over
                 _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, -45f, 45f);
@@ -59,7 +58,7 @@ public class CameraOrbit : MonoBehaviour
         }
 
         //Actual Camera Rig Transformations
-        Quaternion qT = Quaternion.Euler(_LocalRotation.y, _LocalRotation.x, 0);
+        Quaternion qT = Quaternion.Euler(_LocalRotation.y, _LocalRotation.x + 180, 0);
         this._XForm_Parent.rotation = Quaternion.Lerp(this._XForm_Parent.rotation, qT, Time.deltaTime * orbitDampening);
 
         if (this._XForm_Camera.localPosition.z != this._CameraDistance * -1f)
