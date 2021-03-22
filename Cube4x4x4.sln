@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrillAudio.Krilloud.Runtime", "KrillAudio.Krilloud.Runtime.csproj", "{2204AA3F-9379-D061-642C-4A91D78E3F34}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{21EDD2E4-789C-84B6-E41A-1AC1A3750A4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrillAudio.Krilloud.Editor", "KrillAudio.Krilloud.Editor.csproj", "{A24C4CFD-C147-1DEA-5A78-B0488C0A3466}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2204AA3F-9379-D061-642C-4A91D78E3F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2204AA3F-9379-D061-642C-4A91D78E3F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2204AA3F-9379-D061-642C-4A91D78E3F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2204AA3F-9379-D061-642C-4A91D78E3F34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{21EDD2E4-789C-84B6-E41A-1AC1A3750A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{21EDD2E4-789C-84B6-E41A-1AC1A3750A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21EDD2E4-789C-84B6-E41A-1AC1A3750A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21EDD2E4-789C-84B6-E41A-1AC1A3750A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A24C4CFD-C147-1DEA-5A78-B0488C0A3466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24C4CFD-C147-1DEA-5A78-B0488C0A3466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24C4CFD-C147-1DEA-5A78-B0488C0A3466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24C4CFD-C147-1DEA-5A78-B0488C0A3466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
