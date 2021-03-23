@@ -12,6 +12,28 @@ TagManager:
   - F2
   - F3
   - F4
+  - F5
+  - C5
+  - Vertex1
+  - Vertex3
+  - Vertex5
+  - Vertex2
+  - Vertex4
+  - 0x
+  - 1x
+  - 2x
+  - 3x
+  - 4x
+  - 0y
+  - 1y
+  - 2y
+  - 3y
+  - 4y
+  - 0z
+  - 1z
+  - 2z
+  - 3z
+  - 4z
   layers:
   - Default
   - TransparentFX

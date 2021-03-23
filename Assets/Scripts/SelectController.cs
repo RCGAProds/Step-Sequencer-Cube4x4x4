@@ -22,7 +22,7 @@ public class SelectController : MonoBehaviour
 
     public void Select()
     {
-        if (Input.GetMouseButtonDown(0)) //Si se hace CLICK
+        if (Input.GetMouseButtonDown(0)) //If click
         {
             RaycastHit rayHit;
 
