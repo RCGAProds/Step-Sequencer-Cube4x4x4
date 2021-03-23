@@ -12,14 +12,6 @@ TagManager:
   - F2
   - F3
   - F4
-  - C5
-  - F5
-  - Vertex
-  - Vertex1
-  - Vertex2
-  - Vertex3
-  - Vertex4
-  - Vertex5
   layers:
   - Default
   - TransparentFX
@@ -31,7 +23,7 @@ TagManager:
   - 
   - Edges
   - Clickeable
-  - Vertices
+  - 
   - 
   - 
   - 

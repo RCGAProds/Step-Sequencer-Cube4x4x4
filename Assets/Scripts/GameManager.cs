@@ -22,4 +22,9 @@ public class GameManager : MonoBehaviour
             Destroy(controllerSelected);
         }
     }
+
+    public void Delete()
+    {
+        Destroy(controllerSelected);
+    }
 }
