@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using KrillAudio.Krilloud;
 
+using System.Reflection;
+
 public class Controller : MonoBehaviour
 {
     [Header("Raycast Settings")]
@@ -165,723 +167,699 @@ public class Controller : MonoBehaviour
         switch (collision.gameObject.tag) //Identifica qué vertice está tocando
         {
             case "Vertex1":
-                Debug.Log("Vertex1");
                 switch (collision.transform.parent.tag) //Identifica en qué columna está dicho vertice
                 {
                     case "C1":
-                        Debug.Log("C1");
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag) //Idenfitica en qué fila está dicho vertice
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex1 C1 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;        
                             case "F2":
+                                Debug.Log("Vertex1 C1 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex1 C1 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex1 C1 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex1 C1 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C2":
-                        Debug.Log("C2");
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex1 C2 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex1 C2 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex1 C2 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex1 C2 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex1 C2 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C3":
-                        Debug.Log("C3");
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex1 C3 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex1 C3 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex1 C3 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex1 C3 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex1 C3 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C4":
-                        Debug.Log("C4");
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex1 C4 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex1 C4 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex1 C4 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex1 C4 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex1 C4 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C5":
-                        Debug.Log("C5");
                         GameObject parent5 = collision.transform.parent.gameObject;
                         switch (parent5.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex1 C5 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex1 C5 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex1 C5 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex1 C5 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex1 C5 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                 }
                 break;
+
             case "Vertex2":
-
-                Debug.Log("Vertex2");
                 switch (collision.transform.parent.tag)
                 {
-
                     case "C1":
-                        Debug.Log("C1");
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex2 C1 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex2 C1 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex2 C1 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex2 C1 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex2 C1 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C2":
-                        Debug.Log("C2");
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex2 C2 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex2 C2 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex2 C2 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex2 C2 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex2 C2 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C3":
-                        Debug.Log("C3");
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex2 C3 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex2 C3 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex2 C3 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex2 C3 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex2 C3 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C4":
-                        Debug.Log("C4");
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex2 C4 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex2 C4 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex2 C4 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex2 C4 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex2 C4 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C5":
-                        Debug.Log("C5");
                         GameObject parent5 = collision.transform.parent.gameObject;
                         switch (parent5.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex2 C5 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex2 C5 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex2 C5 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex2 C5 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex2 C5 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                 }
                 break;
+
             case "Vertex3":
-
-                Debug.Log("Vertex3");
                 switch (collision.transform.parent.tag)
                 {
-
                     case "C1":
-                        Debug.Log("C1");
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex3 C1 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex3 C1 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex3 C1 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex3 C1 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex3 C1 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C2":
-                        Debug.Log("C2");
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex3 C2 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex3 C2 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex3 C2 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex3 C2 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex3 C2 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C3":
-                        Debug.Log("C3");
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex3 C3 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex3 C3 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex3 C3 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex3 C3 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex3 C3 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C4":
-                        Debug.Log("C4");
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex3 C4 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex3 C4 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex3 C4 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex3 C4 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex3 C4 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C5":
-                        Debug.Log("C5");
                         GameObject parent5 = collision.transform.parent.gameObject;
                         switch (parent5.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex3 C5 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex3 C5 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex3 C5 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex3 C5 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex3 C5 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                 }
                 break;
+
             case "Vertex4":
-
-                Debug.Log("Vertex4");
                 switch (collision.transform.parent.tag)
                 {
-
                     case "C1":
-                        Debug.Log("C1");
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex4 C1 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex4 C1 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex4 C1 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex4 C1 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex4 C1 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C2":
-                        Debug.Log("C2");
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex4 C2 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex4 C2 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex4 C2 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex4 C2 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex4 C2 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C3":
-                        Debug.Log("C3");
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex4 C3 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex4 C3 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex4 C3 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex4 C3 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex4 C3 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C4":
-                        Debug.Log("C4");
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex4 C4 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex4 C4 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex4 C4 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex4 C4 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex4 C4 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C5":
-                        Debug.Log("C5");
                         GameObject parent5 = collision.transform.parent.gameObject;
                         switch (parent5.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex4 C5 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex4 C5 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex4 C5 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex4 C5 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex4 C5 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                 }
                 break;
-            case "Vertex5":
 
-                Debug.Log("Vertex5");
+            case "Vertex5":
                 switch (collision.transform.parent.tag)
                 {
-
                     case "C1":
-                        Debug.Log("C1");
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex5 C1 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex5 C1 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex5 C1 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex5 C1 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex5 C1 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C2":
-                        Debug.Log("C2");
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex5 C2 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex5 C2 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex5 C2 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex5 C2 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex5 C2 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C3":
-                        Debug.Log("C3");
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex5 C3 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex5 C3 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex5 C3 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex5 C3 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex5 C3 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C4":
-                        Debug.Log("C4");
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex5 C4 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex5 C4 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex5 C4 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex5 C4 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex5 C4 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                     case "C5":
-                        Debug.Log("C5");
                         GameObject parent5 = collision.transform.parent.gameObject;
                         switch (parent5.transform.parent.tag)
                         {
                             case "F1":
-                                Debug.Log("F1");
+                                Debug.Log("Vertex5 C5 F1");
                                 kl.SetIntVar(sonido, 0);
                                 break;
                             case "F2":
+                                Debug.Log("Vertex5 C5 F2");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F2");
                                 break;
                             case "F3":
+                                Debug.Log("Vertex5 C5 F3");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F3");
                                 break;
                             case "F4":
+                                Debug.Log("Vertex5 C5 F4");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F4");
                                 break;
                             case "F5":
+                                Debug.Log("Vertex5 C5 F5");
                                 kl.SetIntVar(sonido, 1);
-                                Debug.Log("F5");
                                 break;
                         }
                         break;
                 }
                 break;
         }
-
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        ClearLog();
+    }
 
+    void ClearLog() //Limpia la consola de Debugs
+    {
+        var assembly = Assembly.GetAssembly(typeof(UnityEditor.Editor));
+        var type = assembly.GetType("UnityEditor.LogEntries");
+        var method = type.GetMethod("Clear");
+        method.Invoke(new object(), null);
+    }
 
 }
 
