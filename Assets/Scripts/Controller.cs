@@ -61,11 +61,11 @@ public class Controller : MonoBehaviour
             Controls();
         }
 
-        if (initialPosition == transform.position)
+        if (initialPosition != transform.position)
         {
-            GameManager.gM.canBuild = false;
-        }else{
             GameManager.gM.canBuild = true;
+        }else{
+            GameManager.gM.canBuild = false;
         }
     }
 

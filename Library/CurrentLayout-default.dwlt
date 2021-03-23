@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 62
+  controlID: 81
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 99
+  controlID: 118
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -290,8 +290,8 @@ MonoBehaviour:
     y: 0
     width: 419
     height: 457
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.4600676, y: -0.15393782, z: 1.4979942}
+    m_Target: {x: -2.00352, y: 1.2833817, z: 2.8841002}
     speed: 2
-    m_Value: {x: -1.4600676, y: -0.15393782, z: 1.4979942}
+    m_Value: {x: -1.5, y: 1, z: -0.5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -528,13 +528,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.041547466, y: 0.91937035, z: -0.10107542, w: -0.37791166}
+    m_Target: {x: 0.0024334341, y: 0.9959435, z: -0.08536134, w: 0.028392084}
     speed: 2
-    m_Value: {x: -0.041547436, y: 0.9193697, z: -0.101075344, w: -0.3779114}
+    m_Value: {x: 0.0024334318, y: 0.99594253, z: -0.08536126, w: 0.028392056}
   m_Size:
     m_Target: 2.9217088
     speed: 2
-    m_Value: 2.9217088
+    m_Value: 0.4330127
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -642,7 +642,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6e99ffff989bffffe29bffffe49bffff00ebffff52fbffff0e000000eab40000fab6000058b8000052ba0000a0251213
+      m_ExpandedIDs: 3cfbffff1a3e0000fa410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -823,34 +823,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cgaga\Documents\GitHub\Cube4x4x4
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14430000
-    m_LastClickedID: 17172
-    m_ExpandedIDs: 00000000fc420000
+    m_SelectedIDs: 584c0000
+    m_LastClickedID: 19544
+    m_ExpandedIDs: 00000000424c0000444c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Prefabs
-      m_OriginalName: Prefabs
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17162
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_SearchString: 
@@ -864,7 +864,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc420000
+    m_ExpandedIDs: 00000000424c0000444c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

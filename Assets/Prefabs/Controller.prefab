@@ -115,6 +115,11 @@ MonoBehaviour:
   isSelected: 0
   unSelectedMat: {fileID: 2100000, guid: b3c24505629022747b709b3bd5110247, type: 2}
   selectedMat: {fileID: 2100000, guid: f233bd84ca9f2ec4292c1e2daddc1859, type: 2}
+  kl_Variable0: kl_Variable0
+  kl_Variable1: kl_Variable1
+  kl_Variable2: kl_Variable2
+  kl_Variable3: kl_Variable3
+  kl_Variable4: kl_Variable4
 --- !u!54 &6714031598287479334
 Rigidbody:
   m_ObjectHideFlags: 0

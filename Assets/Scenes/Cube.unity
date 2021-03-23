@@ -15623,6 +15623,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1580213611696757434, guid: b4063a12d8ab2ae45af5006f408c5a3c,
         type: 3}
+      propertyPath: kl_Variable0
+      value: kl_Variable0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580213611696757434, guid: b4063a12d8ab2ae45af5006f408c5a3c,
+        type: 3}
+      propertyPath: kl_Variable1
+      value: kl_Variable1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580213611696757434, guid: b4063a12d8ab2ae45af5006f408c5a3c,
+        type: 3}
+      propertyPath: kl_Variable2
+      value: kl_Variable2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580213611696757434, guid: b4063a12d8ab2ae45af5006f408c5a3c,
+        type: 3}
+      propertyPath: kl_Variable3
+      value: kl_Variable3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580213611696757434, guid: b4063a12d8ab2ae45af5006f408c5a3c,
+        type: 3}
+      propertyPath: kl_Variable4
+      value: kl_Variable4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580213611696757434, guid: b4063a12d8ab2ae45af5006f408c5a3c,
+        type: 3}
       propertyPath: layerRaycast.m_Bits
       value: 256
       objectReference: {fileID: 0}
