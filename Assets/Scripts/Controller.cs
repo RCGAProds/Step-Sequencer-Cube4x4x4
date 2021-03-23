@@ -160,135 +160,135 @@ public class Controller : MonoBehaviour
             case "0z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "0y":
-                        GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag)
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
                         {
-                            case "0x":
+                            case "0y":
                                 Debug.Log("0x 0y 0z");
                                 kl.SetIntVar(kl_Variable0, 0);
                                 break;        
-                            case "1x":
-                                Debug.Log("1x 0y 0z");
+                            case "1y":
+                                Debug.Log("0x 1y 0z");
                                 kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 0y 0z");
+                            case "2y":
+                                Debug.Log("0x 2y 0z");
                                 kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 0y 0z");
+                            case "3y":
+                                Debug.Log("0x 3y 0z");
                                 kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 0y 0z");
+                            case "4y":
+                                Debug.Log("0x 4y 0z");
                                 kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
 
-                    case "1y":
-                        GameObject parent2 = collision.transform.parent.gameObject;
-                        switch (parent2.transform.parent.tag)
+                    case "1x":
+                        GameObject parent1 = collision.transform.parent.gameObject;
+                        switch (parent1.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 1y 0z");
+                            case "0y":
+                                Debug.Log("1x 0y 0z");
                                 kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "1x":
+                            case "1y":
                                 Debug.Log("1x 1y 0z");
                                 kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 1y 0z");
+                            case "2y":
+                                Debug.Log("1x 2y 0z");
                                 kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 1y 0z");
+                            case "3y":
+                                Debug.Log("1x 3y 0z");
                                 kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 1y 0z");
+                            case "4y":
+                                Debug.Log("1x 4y 0z");
                                 kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
 
-                    case "2y":
-                        GameObject parent3 = collision.transform.parent.gameObject;
-                        switch (parent3.transform.parent.tag)
+                    case "2x":
+                        GameObject parent2 = collision.transform.parent.gameObject;
+                        switch (parent2.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 2y 0z");
+                            case "0y":
+                                Debug.Log("2x 0y 0z");
                                 kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 2y 0z");
+                            case "1y":
+                                Debug.Log("2x 1y 0z");
                                 kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "2x":
+                            case "2y":
                                 Debug.Log("2x 2y 0z");
                                 kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 2y 0z");
+                            case "3y":
+                                Debug.Log("2x 3y 0z");
                                 kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 2y 0z");
+                            case "4y":
+                                Debug.Log("2x 4y 0z");
                                 kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
 
-                    case "3y":
-                        GameObject parent4 = collision.transform.parent.gameObject;
-                        switch (parent4.transform.parent.tag)
+                    case "3x":
+                        GameObject parent3 = collision.transform.parent.gameObject;
+                        switch (parent3.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 3y 0z");
+                            case "0y":
+                                Debug.Log("3x 0y 0z");
                                 kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 3y 0z");
+                            case "1y":
+                                Debug.Log("3x 1y 0z");
                                 kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 3y 0z");
+                            case "2y":
+                                Debug.Log("3x 2y 0z");
                                 kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "3x":
+                            case "3y":
                                 Debug.Log("3x 3y 0z");
                                 kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 3y 0z");
+                            case "4y":
+                                Debug.Log("3x 4y 0z");
                                 kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
 
-                    case "4y":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
+                    case "4x":
+                        GameObject parent4 = collision.transform.parent.gameObject;
+                        switch (parent4.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 4y 0z");
+                            case "0y":
+                                Debug.Log("4x 0y 0z");
                                 kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 4y 0z");
+                            case "1y":
+                                Debug.Log("4x 1y 0z");
                                 kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 4y 0z");
+                            case "2y":
+                                Debug.Log("4x 2y 0z");
                                 kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 4y 0z");
+                            case "3y":
+                                Debug.Log("4x 3y 0z");
                                 kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "4x":
+                            case "4y":
                                 Debug.Log("4x 4y 0z");
                                 kl.SetIntVar(kl_Variable0, 4);
                                 break;
@@ -300,135 +300,135 @@ public class Controller : MonoBehaviour
             case "1z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "0y":
-                        GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag)
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
                         {
-                            case "0x":
+                            case "0y":
                                 Debug.Log("0x 0y 1z");
                                 kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 0y 1z");
+                            case "1y":
+                                Debug.Log("0x 1y 1z");
                                 kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 0y 1z");
+                            case "2y":
+                                Debug.Log("0x 2y 1z");
                                 kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 0y 1z");
+                            case "3y":
+                                Debug.Log("0x 3y 1z");
                                 kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 0y 1z");
+                            case "4y":
+                                Debug.Log("0x 4y 1z");
                                 kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
 
-                    case "1y":
-                        GameObject parent2 = collision.transform.parent.gameObject;
-                        switch (parent2.transform.parent.tag)
+                    case "1x":
+                        GameObject parent1 = collision.transform.parent.gameObject;
+                        switch (parent1.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 1y 1z");
+                            case "0y":
+                                Debug.Log("1x 0y 1z");
                                 kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "1x":
+                            case "1y":
                                 Debug.Log("1x 1y 1z");
                                 kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 1y 1z");
+                            case "2y":
+                                Debug.Log("1x 2y 1z");
                                 kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 1y 1z");
+                            case "3y":
+                                Debug.Log("1x 3y 1z");
                                 kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 1y 1z");
+                            case "4y":
+                                Debug.Log("1x 4y 1z");
                                 kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
 
-                    case "2y":
-                        GameObject parent3 = collision.transform.parent.gameObject;
-                        switch (parent3.transform.parent.tag)
+                    case "2x":
+                        GameObject parent2 = collision.transform.parent.gameObject;
+                        switch (parent2.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 2y 1z");
+                            case "0y":
+                                Debug.Log("2x 0y 1z");
                                 kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 2y 1z");
+                            case "1y":
+                                Debug.Log("2x 1y 1z");
                                 kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "2x":
+                            case "2y":
                                 Debug.Log("2x 2y 1z");
                                 kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 2y 1z");
+                            case "3y":
+                                Debug.Log("2x 3y 1z");
                                 kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 2y 1z");
+                            case "4y":
+                                Debug.Log("2x 4y 1z");
                                 kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
 
-                    case "3y":
-                        GameObject parent4 = collision.transform.parent.gameObject;
-                        switch (parent4.transform.parent.tag)
+                    case "3x":
+                        GameObject parent3 = collision.transform.parent.gameObject;
+                        switch (parent3.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 3y 1z");
+                            case "0y":
+                                Debug.Log("3x 0y 1z");
                                 kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 3y 1z");
+                            case "1y":
+                                Debug.Log("3x 1y 1z");
                                 kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 3y 1z");
+                            case "2y":
+                                Debug.Log("3x 2y 1z");
                                 kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "3x":
+                            case "3y":
                                 Debug.Log("3x 3y 1z");
                                 kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 3y 1z");
+                            case "4y":
+                                Debug.Log("3x 4y 1z");
                                 kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
 
-                    case "4y":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
+                    case "4x":
+                        GameObject parent4 = collision.transform.parent.gameObject;
+                        switch (parent4.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 4y 1z");
+                            case "0y":
+                                Debug.Log("4x 0y 1z");
                                 kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 4y 1z");
+                            case "1y":
+                                Debug.Log("4x 1y 1z");
                                 kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 4y 1z");
+                            case "2y":
+                                Debug.Log("4x 2y 1z");
                                 kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 4y 1z");
+                            case "3y":
+                                Debug.Log("4x 3y 1z");
                                 kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "4x":
+                            case "4y":
                                 Debug.Log("4x 4y 1z");
                                 kl.SetIntVar(kl_Variable1, 4);
                                 break;
@@ -440,135 +440,135 @@ public class Controller : MonoBehaviour
             case "2z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "0y":
-                        GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag)
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
                         {
-                            case "0x":
+                            case "0y":
                                 Debug.Log("0x 0y 2z");
                                 kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 0y 2z");
+                            case "1y":
+                                Debug.Log("0x 1y 2z");
                                 kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 0y 2z");
+                            case "2y":
+                                Debug.Log("0x 2y 2z");
                                 kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 0y 2z");
+                            case "3y":
+                                Debug.Log("0x 3y 2z");
                                 kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 0y 2z");
+                            case "4y":
+                                Debug.Log("0x 4y 2z");
                                 kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
 
-                    case "1y":
-                        GameObject parent2 = collision.transform.parent.gameObject;
-                        switch (parent2.transform.parent.tag)
+                    case "1x":
+                        GameObject parent1 = collision.transform.parent.gameObject;
+                        switch (parent1.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 1y 2z");
+                            case "0y":
+                                Debug.Log("1x 0y 2z");
                                 kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "1x":
+                            case "1y":
                                 Debug.Log("1x 1y 2z");
                                 kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 1y 2z");
+                            case "2y":
+                                Debug.Log("1x 2y 2z");
                                 kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 1y 2z");
+                            case "3y":
+                                Debug.Log("1x 3y 2z");
                                 kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 1y 2z");
+                            case "4y":
+                                Debug.Log("1x 4y 2z");
                                 kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
 
-                    case "2y":
-                        GameObject parent3 = collision.transform.parent.gameObject;
-                        switch (parent3.transform.parent.tag)
+                    case "2x":
+                        GameObject parent2 = collision.transform.parent.gameObject;
+                        switch (parent2.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 2y 2z");
+                            case "0y":
+                                Debug.Log("2x 0y 2z");
                                 kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 2y 2z");
+                            case "1y":
+                                Debug.Log("2x 1y 2z");
                                 kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "2x":
+                            case "2y":
                                 Debug.Log("2x 2y 2z");
                                 kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 2y 2z");
+                            case "3y":
+                                Debug.Log("2x 3y 2z");
                                 kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 2y 2z");
+                            case "4y":
+                                Debug.Log("2x 4y 2z");
                                 kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
 
-                    case "3y":
-                        GameObject parent4 = collision.transform.parent.gameObject;
-                        switch (parent4.transform.parent.tag)
+                    case "3x":
+                        GameObject parent3 = collision.transform.parent.gameObject;
+                        switch (parent3.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 3y 2z");
+                            case "0y":
+                                Debug.Log("3x 0y 2z");
                                 kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 3y 2z");
+                            case "1y":
+                                Debug.Log("3x 1y 2z");
                                 kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 3y 2z");
+                            case "2y":
+                                Debug.Log("3x 2y 2z");
                                 kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "3x":
+                            case "3y":
                                 Debug.Log("3x 3y 2z");
                                 kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 3y 2z");
+                            case "4y":
+                                Debug.Log("3x 4y 2z");
                                 kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
 
-                    case "4y":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
+                    case "4x":
+                        GameObject parent4 = collision.transform.parent.gameObject;
+                        switch (parent4.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 4y 2z");
+                            case "0y":
+                                Debug.Log("4x 0y 2z");
                                 kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 4y 2z");
+                            case "1y":
+                                Debug.Log("4x 1y 2z");
                                 kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 4y 2z");
+                            case "2y":
+                                Debug.Log("4x 2y 2z");
                                 kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 4y 2z");
+                            case "3y":
+                                Debug.Log("4x 3y 2z");
                                 kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "4x":
+                            case "4y":
                                 Debug.Log("4x 4y 2z");
                                 kl.SetIntVar(kl_Variable2, 4);
                                 break;
@@ -580,135 +580,135 @@ public class Controller : MonoBehaviour
             case "3z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "0z":
-                        GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag)
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
                         {
-                            case "0x":
+                            case "0y":
                                 Debug.Log("0x 0y 3z");
                                 kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 0y 3z");
+                            case "1y":
+                                Debug.Log("0x 1y 3z");
                                 kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 0y 3z");
+                            case "2y":
+                                Debug.Log("0x 2y 3z");
                                 kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 0y 3z");
+                            case "3y":
+                                Debug.Log("0x 3y 3z");
                                 kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 0y 3z");
+                            case "4y":
+                                Debug.Log("0x 4y 3z");
                                 kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
 
-                    case "1y":
-                        GameObject parent2 = collision.transform.parent.gameObject;
-                        switch (parent2.transform.parent.tag)
+                    case "1x":
+                        GameObject parent1 = collision.transform.parent.gameObject;
+                        switch (parent1.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 1y 3z");
+                            case "0y":
+                                Debug.Log("1x 0y 3z");
                                 kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "1x":
+                            case "1y":
                                 Debug.Log("1x 1y 3z");
                                 kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 1y 3z");
+                            case "2y":
+                                Debug.Log("1x 2y 3z");
                                 kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 1y 3z");
+                            case "3y":
+                                Debug.Log("1x 3y 3z");
                                 kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 1y 3z");
+                            case "4y":
+                                Debug.Log("1x 4y 3z");
                                 kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
 
-                    case "2y":
-                        GameObject parent3 = collision.transform.parent.gameObject;
-                        switch (parent3.transform.parent.tag)
+                    case "2x":
+                        GameObject parent2 = collision.transform.parent.gameObject;
+                        switch (parent2.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 2y 3z");
+                            case "0y":
+                                Debug.Log("2x 0y 3z");
                                 kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 2y 3z");
+                            case "1y":
+                                Debug.Log("2x 1y 3z");
                                 kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "2x":
+                            case "2y":
                                 Debug.Log("2x 2y 3z");
                                 kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 2y 3z");
+                            case "3y":
+                                Debug.Log("2x 3y 3z");
                                 kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 2y 3z");
+                            case "4y":
+                                Debug.Log("2x 4y 3z");
                                 kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
 
-                    case "3y":
-                        GameObject parent4 = collision.transform.parent.gameObject;
-                        switch (parent4.transform.parent.tag)
+                    case "3x":
+                        GameObject parent3 = collision.transform.parent.gameObject;
+                        switch (parent3.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 3y 3z");
+                            case "0y":
+                                Debug.Log("3x 0y 3z");
                                 kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 3y 3z");
+                            case "1y":
+                                Debug.Log("3x 1y 3z");
                                 kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 3y 3z");
+                            case "2y":
+                                Debug.Log("3x 2y 3z");
                                 kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "3x":
+                            case "3y":
                                 Debug.Log("3x 3y 3z");
                                 kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 3y 3z");
+                            case "4y":
+                                Debug.Log("3x 4y 3z");
                                 kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
 
-                    case "4y":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
+                    case "4x":
+                        GameObject parent4 = collision.transform.parent.gameObject;
+                        switch (parent4.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 4y 3z");
+                            case "0y":
+                                Debug.Log("4x 0y 3z");
                                 kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 4y 3z");
+                            case "1y":
+                                Debug.Log("4x 1y 3z");
                                 kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 4y 3z");
+                            case "2y":
+                                Debug.Log("4x 2y 3z");
                                 kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 4y 3z");
+                            case "3y":
+                                Debug.Log("4x 3y 3z");
                                 kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "4x":
+                            case "4y":
                                 Debug.Log("4x 4y 3z");
                                 kl.SetIntVar(kl_Variable3, 4);
                                 break;
@@ -720,134 +720,135 @@ public class Controller : MonoBehaviour
             case "4z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "0y":
-                        GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag)
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
                         {
-                            case "0x":
+                            case "0y":
                                 Debug.Log("0x 0y 4z");
                                 kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 0y 4z");
+                            case "1y":
+                                Debug.Log("0x 1y 4z");
                                 kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 0y 4z");
+                            case "2y":
+                                Debug.Log("0x 2y 4z");
                                 kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 0y 4z");
+                            case "3y":
+                                Debug.Log("0x 3y 4z");
                                 kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 0y 4z");
+                            case "4y":
+                                Debug.Log("0x 4y 4z");
                                 kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
 
-                    case "1y":
-                        GameObject parent2 = collision.transform.parent.gameObject;
-                        switch (parent2.transform.parent.tag)
+                    case "1x":
+                        GameObject parent1 = collision.transform.parent.gameObject;
+                        switch (parent1.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 1y 4z");
+                            case "0y":
+                                Debug.Log("1x 0y 4z");
                                 kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "1x":
+                            case "1y":
                                 Debug.Log("1x 1y 4z");
                                 kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 1y 4z");
+                            case "2y":
+                                Debug.Log("1x 2y 4z");
                                 kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 1y 4z");
+                            case "3y":
+                                Debug.Log("1x 3y 4z");
                                 kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 1y 4z");
+                            case "4y":
+                                Debug.Log("1x 4y 4z");
                                 kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
-                    case "2y":
-                        GameObject parent3 = collision.transform.parent.gameObject;
-                        switch (parent3.transform.parent.tag)
+
+                    case "2x":
+                        GameObject parent2 = collision.transform.parent.gameObject;
+                        switch (parent2.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 2y 4z");
+                            case "0y":
+                                Debug.Log("2x 0y 4z");
                                 kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 2y 4z");
+                            case "1y":
+                                Debug.Log("2x 1y 4z");
                                 kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "2x":
+                            case "2y":
                                 Debug.Log("2x 2y 4z");
                                 kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 2y 4z");
+                            case "3y":
+                                Debug.Log("2x 3y 4z");
                                 kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 2y 4z");
+                            case "4y":
+                                Debug.Log("2x 4y 4z");
                                 kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
 
-                    case "3y":
-                        GameObject parent4 = collision.transform.parent.gameObject;
-                        switch (parent4.transform.parent.tag)
+                    case "3x":
+                        GameObject parent3 = collision.transform.parent.gameObject;
+                        switch (parent3.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 3y 4z");
+                            case "0y":
+                                Debug.Log("3x 0y 4z");
                                 kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 3y 4z");
+                            case "1y":
+                                Debug.Log("3x 1y 4z");
                                 kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 3y 4z");
+                            case "2y":
+                                Debug.Log("3x 2y 4z");
                                 kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "3x":
+                            case "3y":
                                 Debug.Log("3x 3y 4z");
                                 kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "4x":
-                                Debug.Log("4x 3y 4z");
+                            case "4y":
+                                Debug.Log("3x 4y 4z");
                                 kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
 
-                    case "4y":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
+                    case "4x":
+                        GameObject parent4 = collision.transform.parent.gameObject;
+                        switch (parent4.transform.parent.tag)
                         {
-                            case "0x":
-                                Debug.Log("0x 4y 4z");
+                            case "0y":
+                                Debug.Log("4x 0y 4z");
                                 kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "1x":
-                                Debug.Log("1x 4y 4z");
+                            case "1y":
+                                Debug.Log("4x 1y 4z");
                                 kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "2x":
-                                Debug.Log("2x 4y 4z");
+                            case "2y":
+                                Debug.Log("4x 2y 4z");
                                 kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "3x":
-                                Debug.Log("3x 4y 4z");
+                            case "3y":
+                                Debug.Log("4x 3y 4z");
                                 kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "4x":
+                            case "4y":
                                 Debug.Log("4x 4y 4z");
                                 kl.SetIntVar(kl_Variable4, 4);
                                 break;
