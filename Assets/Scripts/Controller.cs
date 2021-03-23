@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using KrillAudio.Krilloud;
-
 using System.Reflection; //For ClearLog
 
 public class Controller : MonoBehaviour

@@ -19,6 +19,15 @@ TagManager:
   - 2z
   - 3z
   - 4z
+  - F2
+  - F1
+  - C3
+  - F3
+  - F4
+  - C1
+  - C2
+  - C4
+  - button
   layers:
   - Default
   - TransparentFX

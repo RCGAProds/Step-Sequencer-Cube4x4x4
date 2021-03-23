@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Delete))
         {
-            Destroy(controllerSelected);
+            Delete();
         }
     }
 

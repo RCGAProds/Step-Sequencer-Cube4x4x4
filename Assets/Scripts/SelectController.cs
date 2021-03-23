@@ -22,18 +22,18 @@ public class SelectController : MonoBehaviour
 
     public void Select()
     {
-        if (Input.GetMouseButtonDown(0)) //If click
+        if (Input.GetMouseButtonDown(0)) //If there's a click
         {
             RaycastHit rayHit;
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),
-                out rayHit, Mathf.Infinity, controllersClickable)) //Si se clickea un controlador clickeable
+                out rayHit, Mathf.Infinity, controllersClickable)) //If there's a collision of the raycast on the layer "controllersClickable"
             {
                 Controller controllerScript = rayHit.collider.GetComponent<Controller>();
 
-                if (controllerScript != null) //Si tiene el script Controller
+                if (controllerScript != null) //If there's a Script called "Controller"
                 {
-                    if (controllerScript.isSelected == false) //Si no está seleccionado
+                    if (controllerScript.isSelected == false) //If it is not selected
                     {
                         foreach (GameObject obj in selectedObjects)
                         {
@@ -48,9 +48,9 @@ public class SelectController : MonoBehaviour
                         rayHit.collider.GetComponent<Controller>().Click();
                         controllerScript.isSelected = true;
                     }
-                    else //Si está seleccionado
+                    else //If it's selected
                     {
-                        if (selectedObjects.Count > 0) //Si hay algo más seleccionado
+                        if (selectedObjects.Count > 0) //If there're something selected.
                         {
                             foreach (GameObject obj in selectedObjects)
                             {
@@ -68,14 +68,9 @@ public class SelectController : MonoBehaviour
                     }
                 }
             }
-            else if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),
-                out rayHit, Mathf.Infinity, buttonsClickable)) //Si se clickea un botón clickeable
+            else //If there's no collision of the raycast
             {
-                return;
-            }
-            else //Si no se clickea nada
-            {
-                if (selectedObjects.Count > 0) //Si hay algo seleccionado
+                if (selectedObjects.Count > 0) //If there're something selected.
                 {
                     foreach (GameObject obj in selectedObjects)
                     {
