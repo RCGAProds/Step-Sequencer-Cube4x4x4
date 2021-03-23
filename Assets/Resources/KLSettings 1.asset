@@ -18,9 +18,54 @@ MonoBehaviour:
   m_krilloudInDebugMode: 0
   placeholderContract:
     tags: []
-    variables: []
+    variables:
+    - kl_Variable0
+    - kl_Variable1
+    - kl_Variable2
+    - kl_Variable3
+    - kl_Variable4
   cacheContract:
     tags: []
-    variables: []
+    variables:
+    - name: kl_Variable0
+      defaultValue: 0
+      isGlobal: 0
+      source: 2
+      content: 0
+      min: 0
+      max: 0
+      sourceContract: 2
+    - name: kl_Variable1
+      defaultValue: 0
+      isGlobal: 0
+      source: 2
+      content: 0
+      min: 0
+      max: 0
+      sourceContract: 2
+    - name: kl_Variable2
+      defaultValue: 0
+      isGlobal: 0
+      source: 2
+      content: 0
+      min: 0
+      max: 0
+      sourceContract: 2
+    - name: kl_Variable3
+      defaultValue: 0
+      isGlobal: 0
+      source: 2
+      content: 0
+      min: 0
+      max: 0
+      sourceContract: 2
+    - name: kl_Variable4
+      defaultValue: 0
+      isGlobal: 0
+      source: 2
+      content: 0
+      min: 0
+      max: 0
+      sourceContract: 2
     soundbank_files: []
     channels: []

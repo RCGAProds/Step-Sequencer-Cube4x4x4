@@ -1,9 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using KrillAudio.Krilloud;
-
-using System.Reflection;
+using System.Reflection; //For ClearLog
 
 public class Controller : MonoBehaviour
 {
@@ -30,9 +29,11 @@ public class Controller : MonoBehaviour
     [Header("Krilloud Settings")]
     private KLAudioSource kl;
 
-    [KLVariable] public string Columna;
-    [KLVariable] public string Instrumento;
-    [KLVariable] public string sonido;
+    [KLVariable] public string kl_Variable0;
+    [KLVariable] public string kl_Variable1;
+    [KLVariable] public string kl_Variable2;
+    [KLVariable] public string kl_Variable3;
+    [KLVariable] public string kl_Variable4;
 
     void Start()
     {
@@ -59,17 +60,15 @@ public class Controller : MonoBehaviour
             Controls();
         }
 
-        if (initialPosition == transform.position)
-        {
-            GameManager.gM.canBuild = false;
-        }
-        else
+        if (initialPosition != transform.position)
         {
             GameManager.gM.canBuild = true;
+        }else{
+            GameManager.gM.canBuild = false;
         }
     }
 
-    private void Detect() //Detecta si está en un vertice o en una línea para poder moverse.
+    private void Detect() //Detects if the Controller can move.
     {
         for (int i = 0; i < ray.Length; i++)
         {
@@ -81,46 +80,39 @@ public class Controller : MonoBehaviour
             canMoveUp = true;
         }
         else { canMoveUp = false; }
+
         if (Physics.Raycast(ray[1], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveRight = true;
         }
         else { canMoveRight = false; }
+
         if (Physics.Raycast(ray[2], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveDown = true;
         }
         else { canMoveDown = false; }
+
         if (Physics.Raycast(ray[3], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveLeft = true;
         }
         else { canMoveLeft = false; }
+
         if (Physics.Raycast(ray[4], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveIn = true;
         }
         else { canMoveIn = false; }
+
         if (Physics.Raycast(ray[5], out hit, Mathf.Infinity, layerRaycast))
         {
             canMoveOut = true;
         }
         else { canMoveOut = false; }
-
-        //DebugRay();
     }
 
-    void DebugRay() //Muestra el raycast por pantalla
-    {
-        Debug.DrawRay(ray[0].origin, ray[0].direction, Color.red);
-        Debug.DrawRay(ray[1].origin, ray[1].direction, Color.red);
-        Debug.DrawRay(ray[2].origin, ray[2].direction, Color.red);
-        Debug.DrawRay(ray[3].origin, ray[3].direction, Color.red);
-        Debug.DrawRay(ray[4].origin, ray[4].direction, Color.red);
-        Debug.DrawRay(ray[5].origin, ray[5].direction, Color.red);
-    }
-
-    private void Controls() //Define como se va a mover el controlador
+    private void Controls() //Inputs + Movement
     {
         if (Input.GetKey(KeyCode.W) && canMoveUp)
         {
@@ -148,698 +140,717 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void Click() //Envia si el controlador está seleccionado
+    public void Click() //Controller Selected
     {
         isSelected = true;
         rend.material = selectedMat;
         GameManager.gM.controllerSelected = this.gameObject;
     }
-
-    public void UnClick() //Envia si el controlador NO está seleccionado
+    public void UnClick() //Controller Unselected
     {
         isSelected = false;
         rend.material = unSelectedMat;
         GameManager.gM.controllerSelected = null;
     }
 
-    public void OnCollisionEnter(Collision collision) 
+    public void OnCollisionEnter(Collision collision) //Here you can define the function of each vertex.
     {
-        switch (collision.gameObject.tag) //Identifica qué vertice está tocando
+        switch (collision.gameObject.tag)
         {
-            case "Vertex1":
-                switch (collision.transform.parent.tag) //Identifica en qué columna está dicho vertice
+            case "0z":
+                switch (collision.transform.parent.tag)
                 {
-                    case "C1":
-                        GameObject parent1 = collision.transform.parent.gameObject;
-                        switch (parent1.transform.parent.tag) //Idenfitica en qué fila está dicho vertice
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex1 C1 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("0x 0y 0z");
+                                kl.SetIntVar(kl_Variable0, 0);
                                 break;        
-                            case "F2":
-                                Debug.Log("Vertex1 C1 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("0x 1y 0z");
+                                kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex1 C1 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("0x 2y 0z");
+                                kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex1 C1 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("0x 3y 0z");
+                                kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex1 C1 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("0x 4y 0z");
+                                kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
-                    case "C2":
+
+                    case "1x":
+                        GameObject parent1 = collision.transform.parent.gameObject;
+                        switch (parent1.transform.parent.tag)
+                        {
+                            case "0y":
+                                Debug.Log("1x 0y 0z");
+                                kl.SetIntVar(kl_Variable0, 0);
+                                break;
+                            case "1y":
+                                Debug.Log("1x 1y 0z");
+                                kl.SetIntVar(kl_Variable0, 1);
+                                break;
+                            case "2y":
+                                Debug.Log("1x 2y 0z");
+                                kl.SetIntVar(kl_Variable0, 2);
+                                break;
+                            case "3y":
+                                Debug.Log("1x 3y 0z");
+                                kl.SetIntVar(kl_Variable0, 3);
+                                break;
+                            case "4y":
+                                Debug.Log("1x 4y 0z");
+                                kl.SetIntVar(kl_Variable0, 4);
+                                break;
+                        }
+                        break;
+
+                    case "2x":
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex1 C2 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("2x 0y 0z");
+                                kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex1 C2 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("2x 1y 0z");
+                                kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex1 C2 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("2x 2y 0z");
+                                kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex1 C2 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("2x 3y 0z");
+                                kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex1 C2 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("2x 4y 0z");
+                                kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
-                    case "C3":
+
+                    case "3x":
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex1 C3 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("3x 0y 0z");
+                                kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex1 C3 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("3x 1y 0z");
+                                kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex1 C3 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("3x 2y 0z");
+                                kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex1 C3 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("3x 3y 0z");
+                                kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex1 C3 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("3x 4y 0z");
+                                kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
-                    case "C4":
+
+                    case "4x":
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex1 C4 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("4x 0y 0z");
+                                kl.SetIntVar(kl_Variable0, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex1 C4 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("4x 1y 0z");
+                                kl.SetIntVar(kl_Variable0, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex1 C4 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("4x 2y 0z");
+                                kl.SetIntVar(kl_Variable0, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex1 C4 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("4x 3y 0z");
+                                kl.SetIntVar(kl_Variable0, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex1 C4 F5");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                        }
-                        break;
-                    case "C5":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
-                        {
-                            case "F1":
-                                Debug.Log("Vertex1 C5 F1");
-                                kl.SetIntVar(sonido, 0);
-                                break;
-                            case "F2":
-                                Debug.Log("Vertex1 C5 F2");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F3":
-                                Debug.Log("Vertex1 C5 F3");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F4":
-                                Debug.Log("Vertex1 C5 F4");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F5":
-                                Debug.Log("Vertex1 C5 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("4x 4y 0z");
+                                kl.SetIntVar(kl_Variable0, 4);
                                 break;
                         }
                         break;
                 }
                 break;
 
-            case "Vertex2":
+            case "1z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "C1":
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
+                        {
+                            case "0y":
+                                Debug.Log("0x 0y 1z");
+                                kl.SetIntVar(kl_Variable1, 0);
+                                break;
+                            case "1y":
+                                Debug.Log("0x 1y 1z");
+                                kl.SetIntVar(kl_Variable1, 1);
+                                break;
+                            case "2y":
+                                Debug.Log("0x 2y 1z");
+                                kl.SetIntVar(kl_Variable1, 2);
+                                break;
+                            case "3y":
+                                Debug.Log("0x 3y 1z");
+                                kl.SetIntVar(kl_Variable1, 3);
+                                break;
+                            case "4y":
+                                Debug.Log("0x 4y 1z");
+                                kl.SetIntVar(kl_Variable1, 4);
+                                break;
+                        }
+                        break;
+
+                    case "1x":
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex2 C1 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("1x 0y 1z");
+                                kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex2 C1 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("1x 1y 1z");
+                                kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex2 C1 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("1x 2y 1z");
+                                kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex2 C1 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("1x 3y 1z");
+                                kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex2 C1 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("1x 4y 1z");
+                                kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
-                    case "C2":
+
+                    case "2x":
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex2 C2 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("2x 0y 1z");
+                                kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex2 C2 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("2x 1y 1z");
+                                kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex2 C2 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("2x 2y 1z");
+                                kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex2 C2 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("2x 3y 1z");
+                                kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex2 C2 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("2x 4y 1z");
+                                kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
-                    case "C3":
+
+                    case "3x":
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex2 C3 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("3x 0y 1z");
+                                kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex2 C3 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("3x 1y 1z");
+                                kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex2 C3 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("3x 2y 1z");
+                                kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex2 C3 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("3x 3y 1z");
+                                kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex2 C3 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("3x 4y 1z");
+                                kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
-                    case "C4":
+
+                    case "4x":
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex2 C4 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("4x 0y 1z");
+                                kl.SetIntVar(kl_Variable1, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex2 C4 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("4x 1y 1z");
+                                kl.SetIntVar(kl_Variable1, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex2 C4 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("4x 2y 1z");
+                                kl.SetIntVar(kl_Variable1, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex2 C4 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("4x 3y 1z");
+                                kl.SetIntVar(kl_Variable1, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex2 C4 F5");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                        }
-                        break;
-                    case "C5":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
-                        {
-                            case "F1":
-                                Debug.Log("Vertex2 C5 F1");
-                                kl.SetIntVar(sonido, 0);
-                                break;
-                            case "F2":
-                                Debug.Log("Vertex2 C5 F2");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F3":
-                                Debug.Log("Vertex2 C5 F3");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F4":
-                                Debug.Log("Vertex2 C5 F4");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F5":
-                                Debug.Log("Vertex2 C5 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("4x 4y 1z");
+                                kl.SetIntVar(kl_Variable1, 4);
                                 break;
                         }
                         break;
                 }
                 break;
 
-            case "Vertex3":
+            case "2z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "C1":
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
+                        {
+                            case "0y":
+                                Debug.Log("0x 0y 2z");
+                                kl.SetIntVar(kl_Variable2, 0);
+                                break;
+                            case "1y":
+                                Debug.Log("0x 1y 2z");
+                                kl.SetIntVar(kl_Variable2, 1);
+                                break;
+                            case "2y":
+                                Debug.Log("0x 2y 2z");
+                                kl.SetIntVar(kl_Variable2, 2);
+                                break;
+                            case "3y":
+                                Debug.Log("0x 3y 2z");
+                                kl.SetIntVar(kl_Variable2, 3);
+                                break;
+                            case "4y":
+                                Debug.Log("0x 4y 2z");
+                                kl.SetIntVar(kl_Variable2, 4);
+                                break;
+                        }
+                        break;
+
+                    case "1x":
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex3 C1 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("1x 0y 2z");
+                                kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex3 C1 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("1x 1y 2z");
+                                kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex3 C1 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("1x 2y 2z");
+                                kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex3 C1 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("1x 3y 2z");
+                                kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex3 C1 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("1x 4y 2z");
+                                kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
-                    case "C2":
+
+                    case "2x":
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex3 C2 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("2x 0y 2z");
+                                kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex3 C2 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("2x 1y 2z");
+                                kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex3 C2 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("2x 2y 2z");
+                                kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex3 C2 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("2x 3y 2z");
+                                kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex3 C2 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("2x 4y 2z");
+                                kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
-                    case "C3":
+
+                    case "3x":
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex3 C3 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("3x 0y 2z");
+                                kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex3 C3 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("3x 1y 2z");
+                                kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex3 C3 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("3x 2y 2z");
+                                kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex3 C3 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("3x 3y 2z");
+                                kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex3 C3 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("3x 4y 2z");
+                                kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
-                    case "C4":
+
+                    case "4x":
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex3 C4 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("4x 0y 2z");
+                                kl.SetIntVar(kl_Variable2, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex3 C4 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("4x 1y 2z");
+                                kl.SetIntVar(kl_Variable2, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex3 C4 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("4x 2y 2z");
+                                kl.SetIntVar(kl_Variable2, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex3 C4 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("4x 3y 2z");
+                                kl.SetIntVar(kl_Variable2, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex3 C4 F5");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                        }
-                        break;
-                    case "C5":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
-                        {
-                            case "F1":
-                                Debug.Log("Vertex3 C5 F1");
-                                kl.SetIntVar(sonido, 0);
-                                break;
-                            case "F2":
-                                Debug.Log("Vertex3 C5 F2");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F3":
-                                Debug.Log("Vertex3 C5 F3");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F4":
-                                Debug.Log("Vertex3 C5 F4");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F5":
-                                Debug.Log("Vertex3 C5 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("4x 4y 2z");
+                                kl.SetIntVar(kl_Variable2, 4);
                                 break;
                         }
                         break;
                 }
                 break;
 
-            case "Vertex4":
+            case "3z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "C1":
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
+                        {
+                            case "0y":
+                                Debug.Log("0x 0y 3z");
+                                kl.SetIntVar(kl_Variable3, 0);
+                                break;
+                            case "1y":
+                                Debug.Log("0x 1y 3z");
+                                kl.SetIntVar(kl_Variable3, 1);
+                                break;
+                            case "2y":
+                                Debug.Log("0x 2y 3z");
+                                kl.SetIntVar(kl_Variable3, 2);
+                                break;
+                            case "3y":
+                                Debug.Log("0x 3y 3z");
+                                kl.SetIntVar(kl_Variable3, 3);
+                                break;
+                            case "4y":
+                                Debug.Log("0x 4y 3z");
+                                kl.SetIntVar(kl_Variable3, 4);
+                                break;
+                        }
+                        break;
+
+                    case "1x":
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex4 C1 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("1x 0y 3z");
+                                kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex4 C1 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("1x 1y 3z");
+                                kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex4 C1 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("1x 2y 3z");
+                                kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex4 C1 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("1x 3y 3z");
+                                kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex4 C1 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("1x 4y 3z");
+                                kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
-                    case "C2":
+
+                    case "2x":
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex4 C2 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("2x 0y 3z");
+                                kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex4 C2 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("2x 1y 3z");
+                                kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex4 C2 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("2x 2y 3z");
+                                kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex4 C2 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("2x 3y 3z");
+                                kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex4 C2 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("2x 4y 3z");
+                                kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
-                    case "C3":
+
+                    case "3x":
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex4 C3 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("3x 0y 3z");
+                                kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex4 C3 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("3x 1y 3z");
+                                kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex4 C3 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("3x 2y 3z");
+                                kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex4 C3 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("3x 3y 3z");
+                                kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex4 C3 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("3x 4y 3z");
+                                kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
-                    case "C4":
+
+                    case "4x":
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex4 C4 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("4x 0y 3z");
+                                kl.SetIntVar(kl_Variable3, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex4 C4 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("4x 1y 3z");
+                                kl.SetIntVar(kl_Variable3, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex4 C4 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("4x 2y 3z");
+                                kl.SetIntVar(kl_Variable3, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex4 C4 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("4x 3y 3z");
+                                kl.SetIntVar(kl_Variable3, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex4 C4 F5");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                        }
-                        break;
-                    case "C5":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
-                        {
-                            case "F1":
-                                Debug.Log("Vertex4 C5 F1");
-                                kl.SetIntVar(sonido, 0);
-                                break;
-                            case "F2":
-                                Debug.Log("Vertex4 C5 F2");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F3":
-                                Debug.Log("Vertex4 C5 F3");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F4":
-                                Debug.Log("Vertex4 C5 F4");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F5":
-                                Debug.Log("Vertex4 C5 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("4x 4y 3z");
+                                kl.SetIntVar(kl_Variable3, 4);
                                 break;
                         }
                         break;
                 }
                 break;
 
-            case "Vertex5":
+            case "4z":
                 switch (collision.transform.parent.tag)
                 {
-                    case "C1":
+                    case "0x":
+                        GameObject parent0 = collision.transform.parent.gameObject;
+                        switch (parent0.transform.parent.tag)
+                        {
+                            case "0y":
+                                Debug.Log("0x 0y 4z");
+                                kl.SetIntVar(kl_Variable4, 0);
+                                break;
+                            case "1y":
+                                Debug.Log("0x 1y 4z");
+                                kl.SetIntVar(kl_Variable4, 1);
+                                break;
+                            case "2y":
+                                Debug.Log("0x 2y 4z");
+                                kl.SetIntVar(kl_Variable4, 2);
+                                break;
+                            case "3y":
+                                Debug.Log("0x 3y 4z");
+                                kl.SetIntVar(kl_Variable4, 3);
+                                break;
+                            case "4y":
+                                Debug.Log("0x 4y 4z");
+                                kl.SetIntVar(kl_Variable4, 4);
+                                break;
+                        }
+                        break;
+
+                    case "1x":
                         GameObject parent1 = collision.transform.parent.gameObject;
                         switch (parent1.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex5 C1 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("1x 0y 4z");
+                                kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex5 C1 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("1x 1y 4z");
+                                kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex5 C1 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("1x 2y 4z");
+                                kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex5 C1 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("1x 3y 4z");
+                                kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex5 C1 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("1x 4y 4z");
+                                kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
-                    case "C2":
+
+                    case "2x":
                         GameObject parent2 = collision.transform.parent.gameObject;
                         switch (parent2.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex5 C2 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("2x 0y 4z");
+                                kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex5 C2 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("2x 1y 4z");
+                                kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex5 C2 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("2x 2y 4z");
+                                kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex5 C2 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("2x 3y 4z");
+                                kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex5 C2 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("2x 4y 4z");
+                                kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
-                    case "C3":
+
+                    case "3x":
                         GameObject parent3 = collision.transform.parent.gameObject;
                         switch (parent3.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex5 C3 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("3x 0y 4z");
+                                kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex5 C3 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("3x 1y 4z");
+                                kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex5 C3 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("3x 2y 4z");
+                                kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex5 C3 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("3x 3y 4z");
+                                kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex5 C3 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("3x 4y 4z");
+                                kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
-                    case "C4":
+
+                    case "4x":
                         GameObject parent4 = collision.transform.parent.gameObject;
                         switch (parent4.transform.parent.tag)
                         {
-                            case "F1":
-                                Debug.Log("Vertex5 C4 F1");
-                                kl.SetIntVar(sonido, 0);
+                            case "0y":
+                                Debug.Log("4x 0y 4z");
+                                kl.SetIntVar(kl_Variable4, 0);
                                 break;
-                            case "F2":
-                                Debug.Log("Vertex5 C4 F2");
-                                kl.SetIntVar(sonido, 1);
+                            case "1y":
+                                Debug.Log("4x 1y 4z");
+                                kl.SetIntVar(kl_Variable4, 1);
                                 break;
-                            case "F3":
-                                Debug.Log("Vertex5 C4 F3");
-                                kl.SetIntVar(sonido, 1);
+                            case "2y":
+                                Debug.Log("4x 2y 4z");
+                                kl.SetIntVar(kl_Variable4, 2);
                                 break;
-                            case "F4":
-                                Debug.Log("Vertex5 C4 F4");
-                                kl.SetIntVar(sonido, 1);
+                            case "3y":
+                                Debug.Log("4x 3y 4z");
+                                kl.SetIntVar(kl_Variable4, 3);
                                 break;
-                            case "F5":
-                                Debug.Log("Vertex5 C4 F5");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                        }
-                        break;
-                    case "C5":
-                        GameObject parent5 = collision.transform.parent.gameObject;
-                        switch (parent5.transform.parent.tag)
-                        {
-                            case "F1":
-                                Debug.Log("Vertex5 C5 F1");
-                                kl.SetIntVar(sonido, 0);
-                                break;
-                            case "F2":
-                                Debug.Log("Vertex5 C5 F2");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F3":
-                                Debug.Log("Vertex5 C5 F3");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F4":
-                                Debug.Log("Vertex5 C5 F4");
-                                kl.SetIntVar(sonido, 1);
-                                break;
-                            case "F5":
-                                Debug.Log("Vertex5 C5 F5");
-                                kl.SetIntVar(sonido, 1);
+                            case "4y":
+                                Debug.Log("4x 4y 4z");
+                                kl.SetIntVar(kl_Variable4, 4);
                                 break;
                         }
                         break;
@@ -853,14 +864,11 @@ public class Controller : MonoBehaviour
         ClearLog();
     }
 
-    void ClearLog() //Limpia la consola de Debugs
+    void ClearLog() //Clear the console
     {
         var assembly = Assembly.GetAssembly(typeof(UnityEditor.Editor));
         var type = assembly.GetType("UnityEditor.LogEntries");
         var method = type.GetMethod("Clear");
         method.Invoke(new object(), null);
     }
-
 }
-
-

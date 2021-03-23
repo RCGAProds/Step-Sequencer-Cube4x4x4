@@ -10,6 +10,46 @@ namespace KrillAudio.Krilloud
 
 		public class Variables
 		{
+			/// <summary>
+			/// Variable: kl_Variable0
+			/// Range: [0 - 0]
+			/// Type: Local
+			/// </summary>
+			[System.Obsolete("Placeholder")]
+			public const string kl_Variable0 = "kl_Variable0";
+
+			/// <summary>
+			/// Variable: kl_Variable1
+			/// Range: [0 - 0]
+			/// Type: Local
+			/// </summary>
+			[System.Obsolete("Placeholder")]
+			public const string kl_Variable1 = "kl_Variable1";
+
+			/// <summary>
+			/// Variable: kl_Variable2
+			/// Range: [0 - 0]
+			/// Type: Local
+			/// </summary>
+			[System.Obsolete("Placeholder")]
+			public const string kl_Variable2 = "kl_Variable2";
+
+			/// <summary>
+			/// Variable: kl_Variable3
+			/// Range: [0 - 0]
+			/// Type: Local
+			/// </summary>
+			[System.Obsolete("Placeholder")]
+			public const string kl_Variable3 = "kl_Variable3";
+
+			/// <summary>
+			/// Variable: kl_Variable4
+			/// Range: [0 - 0]
+			/// Type: Local
+			/// </summary>
+			[System.Obsolete("Placeholder")]
+			public const string kl_Variable4 = "kl_Variable4";
+
 		}
 
 		public class Channels
