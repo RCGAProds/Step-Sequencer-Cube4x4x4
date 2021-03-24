@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gM;
 
+
     [HideInInspector]
     public GameObject controllerSelected;
     public bool canBuild;
@@ -21,10 +22,15 @@ public class GameManager : MonoBehaviour
         {
             Delete();
         }
+
+       
     }
 
     public void Delete()
     {
         Destroy(controllerSelected);
     }
+
+   
+    
 }
