@@ -65,8 +65,10 @@
     <Compile Include="Assets\KrillAudio\Krilloud\AUTOGEN_KL.cs" />
     <Compile Include="Assets\Scripts\CameraOrbit.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\ControllerMovil.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Generator.cs" />
+    <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\SelectController.cs" />
     <None Include="Assets\StreamingAssets\KrilloudData\info.txt" />
     <Reference Include="UnityEngine">

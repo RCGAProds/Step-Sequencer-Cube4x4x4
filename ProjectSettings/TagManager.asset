@@ -28,6 +28,8 @@ TagManager:
   - C2
   - C4
   - button
+  - ChangeMode
+  - Generador
   layers:
   - Default
   - TransparentFX

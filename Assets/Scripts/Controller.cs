@@ -63,9 +63,16 @@ public class Controller : MonoBehaviour
         if (initialPosition != transform.position)
         {
             GameManager.gM.canBuild = true;
-        }else{
+        }
+        else {
             GameManager.gM.canBuild = false;
         }
+
+        
+        
+
+
+
     }
 
     private void Detect() //Detects if the Controller can move.
@@ -871,4 +878,5 @@ public class Controller : MonoBehaviour
         var method = type.GetMethod("Clear");
         method.Invoke(new object(), null);
     }
+
 }
