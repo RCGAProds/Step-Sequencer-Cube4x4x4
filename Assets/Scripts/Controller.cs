@@ -68,9 +68,10 @@ public class Controller : MonoBehaviour
             GameManager.gM.canBuild = false;
         }
 
-        
-        
-
+        if (GameManager.gM.isPlaying == true)
+        {
+            PlaySound();
+        }
 
 
     }
@@ -121,27 +122,27 @@ public class Controller : MonoBehaviour
 
     private void Controls() //Inputs + Movement
     {
-        if (Input.GetKey(KeyCode.W) && canMoveUp)
+        if ((Input.GetKey(KeyCode.W) && canMoveUp) || (Input.GetAxis("Vdpad") > 0 && canMoveUp)) // Move the controller up
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.D) && canMoveLeft)
+        if (Input.GetKey(KeyCode.D) && canMoveLeft || (Input.GetAxis("Hdpad") > 0 && canMoveLeft))// Move the controller left
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.S) && canMoveDown)
+        if (Input.GetKey(KeyCode.S) && canMoveDown || (Input.GetAxis("Vdpad") < 0 && canMoveDown)) // Move the controller down
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A) && canMoveRight)
-        {
+        if (Input.GetKey(KeyCode.A) && canMoveRight || (Input.GetAxis("Hdpad") < 0 && canMoveRight)) // Move the controller right
+        { 
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Q) && canMoveIn)
+        if (Input.GetKey(KeyCode.Q) && canMoveIn || (Input.GetAxis("VerticalXboxR") > 0 && canMoveIn)) // Move the controller in
         {
             transform.position += Vector3.forward * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.E) && canMoveOut)
+        if (Input.GetKey(KeyCode.E) && canMoveOut || (Input.GetAxis("VerticalXboxR") < 0 && canMoveOut)) // Move the controller out
         {
             transform.position += Vector3.back * speed * Time.deltaTime;
         }
@@ -879,4 +880,8 @@ public class Controller : MonoBehaviour
         method.Invoke(new object(), null);
     }
 
+    private void PlaySound()
+    {
+        kl.Play();
+    } // Play the sound that is linked with krilloud
 }

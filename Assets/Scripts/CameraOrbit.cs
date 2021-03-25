@@ -25,26 +25,23 @@ public class CameraOrbit : MonoBehaviour
     //Late Update is called once per frame, after Update() on every game object in the scene.
     void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            cameraDisabled = !cameraDisabled;
-        }
-
-        if (!cameraDisabled)
+        if (Input.GetMouseButton(1))
         {
             //Rotation based on Mouse Coordinates
-            if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+            if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0 )
             {
                 _LocalRotation.x -= Input.GetAxis("Mouse X") * mouseSensitivity;
                 _LocalRotation.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
 
                 //Clamp the y Rotation to horizon and not flipping over
-                _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, -45f, 45f);
+                _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, -90f, 90f);
             }
+            
 
             //Zooming Input from our Mouse Scroll Wheel
             if (Input.GetAxis("Mouse ScrollWheel") != 0f)
             {
+
                 float scrollAmount = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity;
 
                 //Makes camera zoom faster the further away it is from the target
@@ -55,6 +52,42 @@ public class CameraOrbit : MonoBehaviour
                 //This makes camera go no closer than x meters from target, and no further than x meters.
                 this._CameraDistance = Mathf.Clamp(this._CameraDistance, 1.5f, 8f);
             }
+          
+        }
+
+        if (Input.GetAxis("HorizontalXboxL") != 0 || Input.GetAxis("VerticalXboxL") != 0) //Rotation based on the controller
+        {
+            _LocalRotation.x -= Input.GetAxis("HorizontalXboxL") * mouseSensitivity;
+            _LocalRotation.y += Input.GetAxis("VerticalXboxL") * mouseSensitivity;
+
+            //Clamp the y Rotation to horizon and not flipping over
+            _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, -90f, 90f);
+        }
+        if (Input.GetAxis("LT") != 0f) //Zooming Input from our Right joystick
+        {
+
+            float scrollAmount = Input.GetAxis("LT") * scrollSensitivity;
+
+            //Makes camera zoom faster the further away it is from the target
+            scrollAmount *= (this._CameraDistance * 0.3f);
+
+            this._CameraDistance += scrollAmount * -1f;
+
+            //This makes camera go no closer than x meters from target, and no further than x meters.
+            this._CameraDistance = Mathf.Clamp(this._CameraDistance, 1.5f, 8f);
+        }
+        if (Input.GetAxis("RT") != 0f) //Zooming Out
+        {
+
+            float scrollAmount = -Input.GetAxis("RT") * scrollSensitivity;
+
+            //Makes camera zoom faster the further away it is from the target
+            scrollAmount *= (this._CameraDistance * 0.3f);
+
+            this._CameraDistance += scrollAmount * -1f;
+
+            //This makes camera go no closer than x meters from target, and no further than x meters.
+            this._CameraDistance = Mathf.Clamp(this._CameraDistance, 1.5f, 8f);
         }
 
         //Actual Camera Rig Transformations

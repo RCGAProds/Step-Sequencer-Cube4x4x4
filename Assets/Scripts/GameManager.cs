@@ -16,23 +16,33 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gM = this;
+
+        if ( Input.GetButton("Lb"))
+        {
+            PlayButton scriptButton = GetComponent<PlayButton>();
+
+            scriptButton.Play();
+
+            
+
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Delete))
+        if (Input.GetKeyDown(KeyCode.Delete) || Input.GetButton("X_button")) 
         {
-            Delete();
+            Delete(); // Destroy the actual controller selected
         }
-
     }
 
     public void Delete()
     {
         Destroy(controllerSelected);
+        canBuild = true;
     }
 
-
+    
    
     
 }

@@ -18,11 +18,15 @@ public class SelectController : MonoBehaviour
     void Update()
     {
         Select();
+        UnSelect();
+
+
+
     }
 
     public void Select()
     {
-        if (Input.GetMouseButtonDown(0)) //If there's a click
+        if (Input.GetMouseButtonDown(0) || Input.GetButton("A_button")) //If there's a click
         {
             RaycastHit rayHit;
 
@@ -68,7 +72,7 @@ public class SelectController : MonoBehaviour
                     }
                 }
             }
-            else //If there's no collision of the raycast
+            else  //If there's no collision of the raycast
             {
                 if (selectedObjects.Count > 0) //If there're something selected.
                 {
@@ -83,6 +87,30 @@ public class SelectController : MonoBehaviour
                     selectedObjects.Clear();
                 }
             }
+            
+            
+
         }
     }
+
+    private void UnSelect()
+    {
+        if (Input.GetButtonDown("B_button") || Input.GetKey(KeyCode.F))
+        {
+            if (selectedObjects.Count > 0) //If there're something selected.
+            {
+                foreach (GameObject obj in selectedObjects)
+                {
+                    if (obj != null)
+                    {
+                        obj.GetComponent<Controller>().isSelected = false;
+                        obj.GetComponent<Controller>().UnClick();
+                    }
+                }
+                selectedObjects.Clear();
+            }
+
+        }
+    }
+   
 }
