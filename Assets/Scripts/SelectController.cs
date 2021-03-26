@@ -20,8 +20,6 @@ public class SelectController : MonoBehaviour
         Select();
         UnSelect();
 
-
-
     }
 
     public void Select()
@@ -70,6 +68,29 @@ public class SelectController : MonoBehaviour
                         controllerScript.isSelected = true;
                         controllerScript.Click();
                     }
+                }
+                if (rayHit.collider.gameObject.CompareTag("button"))
+                {
+                    PlayButton scriptButton = rayHit.collider.gameObject.GetComponent<PlayButton>();
+                    Generator scriptGenerator = rayHit.collider.gameObject.GetComponent<Generator>();
+
+                    if (GameManager.gM.isPlaying == false && scriptButton != null)
+                    {
+                        scriptButton.Play();
+                        
+                    }
+                    if (GameManager.gM.isPlaying == true && scriptButton != null)
+                    {
+                        scriptButton.Stop();
+                    
+                    }
+                    if (scriptGenerator != null)
+                    {
+                        scriptGenerator.SpawnController();
+                    }
+
+
+
                 }
 
             }

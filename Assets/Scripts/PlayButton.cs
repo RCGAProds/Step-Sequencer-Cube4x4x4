@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayButton : MonoBehaviour
 {
-    public Text playtext;
+  
     public GameObject button;
 
     [Header("Material settings")]
@@ -19,31 +19,19 @@ public class PlayButton : MonoBehaviour
         renderButton = button.GetComponent<Renderer>();
     }
 
-    public void Play()
-    {
-
-
-        if (GameManager.gM.isPlaying == true)
-        {
-            GameManager.gM.isPlaying = false;
-            playtext.text = "Play";
-            renderButton.material = stopMaterial;
-            Debug.Log("play");
-            
-            
-        }
-    }
-
     public void Stop()
     {
-        if (GameManager.gM.isPlaying == false) { 
+            GameManager.gM.isPlaying = false;
 
+            renderButton.material = stopMaterial;
+   
+    }
+
+    public void Play()
+    {
             GameManager.gM.isPlaying = true;
-            playtext.text = "Stop";
+   
             renderButton.material = playMaterial;
-            Debug.Log("Stop");
-
-        }
-
+      
     }
 }

@@ -138,6 +138,7 @@ public class Controller : MonoBehaviour
         { 
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
+       
         if (Input.GetKey(KeyCode.Q) && canMoveIn || (Input.GetAxis("VerticalXboxR") > 0 && canMoveIn)) // Move the controller in
         {
             transform.position += Vector3.forward * speed * Time.deltaTime;

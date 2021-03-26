@@ -5,8 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gM;
-    
 
+
+
+    PlayButton scriptButton;
+    Generator scriptGenerator;
+
+    
+    
 
     [HideInInspector]
     public GameObject controllerSelected;
@@ -15,9 +21,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        gM = this;
+       gM = this;
+       scriptButton = GetComponent<PlayButton>();
+       scriptGenerator = GetComponent<Generator>();
+       isPlaying = false;
+       canBuild = true;
 
-      
     }
 
     private void Update()
@@ -26,14 +35,17 @@ public class GameManager : MonoBehaviour
         {
             Delete(); // Destroy the actual controller selected
         }
-
-
-        if (Input.GetButton("Lb"))
+        if (Input.GetButton("Lb") && isPlaying == false)
         {
-            PlayButton scriptButton = GetComponent<PlayButton>();
-
             scriptButton.Play();
-
+        }
+        if (Input.GetButton("Rb") && isPlaying == true)
+        {
+            scriptButton.Stop();
+        }
+        if ( canBuild == true && Input.GetButtonDown("Y_button"))
+        {
+            InvockeController();
         }
     }
 
@@ -41,6 +53,13 @@ public class GameManager : MonoBehaviour
     {
         Destroy(controllerSelected);
         canBuild = true;
+    }
+
+    public void InvockeController()
+    {
+        scriptGenerator.SpawnController();
+        canBuild = false;
+
     }
 
     
