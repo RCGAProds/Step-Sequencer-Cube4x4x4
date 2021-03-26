@@ -71,6 +71,7 @@ public class SelectController : MonoBehaviour
                         controllerScript.Click();
                     }
                 }
+
             }
             else  //If there's no collision of the raycast
             {

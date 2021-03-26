@@ -17,15 +17,7 @@ public class GameManager : MonoBehaviour
     {
         gM = this;
 
-        if ( Input.GetButton("Lb"))
-        {
-            PlayButton scriptButton = GetComponent<PlayButton>();
-
-            scriptButton.Play();
-
-            
-
-        }
+      
     }
 
     private void Update()
@@ -33,6 +25,15 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Delete) || Input.GetButton("X_button")) 
         {
             Delete(); // Destroy the actual controller selected
+        }
+
+
+        if (Input.GetButton("Lb"))
+        {
+            PlayButton scriptButton = GetComponent<PlayButton>();
+
+            scriptButton.Play();
+
         }
     }
 

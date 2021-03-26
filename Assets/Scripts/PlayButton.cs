@@ -28,14 +28,22 @@ public class PlayButton : MonoBehaviour
             GameManager.gM.isPlaying = false;
             playtext.text = "Play";
             renderButton.material = stopMaterial;
+            Debug.Log("play");
             
             
         }
-        else
-        {
+    }
+
+    public void Stop()
+    {
+        if (GameManager.gM.isPlaying == false) { 
+
             GameManager.gM.isPlaying = true;
             playtext.text = "Stop";
             renderButton.material = playMaterial;
+            Debug.Log("Stop");
+
         }
+
     }
 }
