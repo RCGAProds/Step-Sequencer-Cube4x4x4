@@ -64,7 +64,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Krilloud\Editor\CustomEditors\KLAudioSourceEditor.cs" />
+    <Compile Include="Assets\Krilloud\Editor\CustomEditors\KLCenterEditor.cs" />
+    <Compile Include="Assets\Krilloud\Editor\CustomEditors\KLListenerEditor.cs" />
+    <Compile Include="Assets\Krilloud\Editor\CustomEditors\KLServerEditor.cs" />
     <Compile Include="Assets\Krilloud\Editor\CustomEditors\KLSettingsEditor.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Drawers\KLTagDrawer.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Drawers\KLVariableDrawer.cs" />
+    <Compile Include="Assets\Krilloud\Editor\EditorExtensions\KLCodeGenerator.cs" />
+    <Compile Include="Assets\Krilloud\Editor\EditorExtensions\KLHierarchyIcons.cs" />
+    <Compile Include="Assets\Krilloud\Editor\EditorExtensions\KLMenuItems.cs" />
+    <Compile Include="Assets\Krilloud\Editor\EditorExtensions\KLPostProcessor.cs" />
+    <Compile Include="Assets\Krilloud\Editor\KLContractUpdate.cs" />
+    <Compile Include="Assets\Krilloud\Editor\KLEditorCore.cs" />
+    <Compile Include="Assets\Krilloud\Editor\KLUnityEditorCallbacks.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Utils\KLEditorExtensions.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Utils\KLEditorStyles.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Utils\KLEditorUtils.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Windows\KLDebugWindow.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Windows\KLPlaceholderWindow.cs" />
+    <Compile Include="Assets\Krilloud\Editor\Windows\KLTagExplorerWindow.cs" />
     <None Include="Assets\Krilloud\Editor\KrillAudio.Krilloud.Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.22f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -64,7 +64,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Krilloud\Runtime\Core\Attributes\KLTagAttribute.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Attributes\KLVariableAttribute.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Definitions\KLChannelDefinition.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Definitions\KLContractDefinition.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Definitions\KLSoundbankFileDefinition.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Definitions\KLTagDefinition.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Definitions\KLVariableDefinition.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Exceptions\KrilloudNotInitializedException.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Services\KLStartup.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Services\Logging\ILogger.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Services\Logging\KLUnityLogger.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Services\Serialization\CerealJSONSerializationService.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Core\Services\Serialization\ISerializationService.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KLAudioSource.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KLBehaviour.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KLCenter.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KLListener.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KLServer.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KLSettings.cs" />
     <Compile Include="Assets\Krilloud\Runtime\Krilloud.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\KrilloudServer.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Utils\KLMath.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Utils\KLUtils.cs" />
+    <Compile Include="Assets\Krilloud\Runtime\Utils\ResourceSingleton.cs" />
     <None Include="Assets\Krilloud\Runtime\KrillAudio.Krilloud.Runtime.asmdef" />
     <None Include="Assets\Krilloud\Runtime\Plugins\Newtonsoft.Json\net35\Newtonsoft.Json.xml" />
     <Reference Include="UnityEngine">
