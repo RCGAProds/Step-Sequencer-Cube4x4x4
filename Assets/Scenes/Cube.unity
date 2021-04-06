@@ -5317,8 +5317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 7489115474749780312}
-  playMaterial: {fileID: 2100000, guid: 236d2380efe51b3419cac4149ff587af, type: 2}
-  stopMaterial: {fileID: 2100000, guid: ae6ffec69f20c614dac1777b7e98841b, type: 2}
+  playMaterial: {fileID: 2100000, guid: f233bd84ca9f2ec4292c1e2daddc1859, type: 2}
+  stopMaterial: {fileID: 2100000, guid: 21f248a67fb7d824e9b5ac4a8ce8980b, type: 2}
 --- !u!1 &778903825
 GameObject:
   m_ObjectHideFlags: 0
@@ -11608,7 +11608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerSelected: {fileID: 0}
   canBuild: 0
-  isPlaying: 0
+  isPlaying: 1
 --- !u!114 &1668559760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15476,7 +15476,7 @@ PrefabInstance:
     - target: {fileID: 1566470081796565875, guid: 3348e0f5c99b6f9419ce42188caf9bbe,
         type: 3}
       propertyPath: m_Name
-      value: button
+      value: buttonPlay
       objectReference: {fileID: 0}
     - target: {fileID: 1566470081796565875, guid: 3348e0f5c99b6f9419ce42188caf9bbe,
         type: 3}
