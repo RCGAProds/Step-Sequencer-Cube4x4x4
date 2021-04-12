@@ -30,6 +30,7 @@ TagManager:
   - button
   - ChangeMode
   - Generador
+  - buttonBola
   layers:
   - Default
   - TransparentFX

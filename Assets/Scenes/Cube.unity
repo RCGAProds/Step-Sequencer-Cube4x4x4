@@ -15580,7 +15580,7 @@ PrefabInstance:
     - target: {fileID: 523817211230338776, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
       propertyPath: m_TagString
-      value: button
+      value: buttonBola
       objectReference: {fileID: 0}
     - target: {fileID: 1030885889573085534, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
@@ -15590,7 +15590,7 @@ PrefabInstance:
     - target: {fileID: 1030885889573085534, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
       propertyPath: m_TagString
-      value: button
+      value: buttonBola
       objectReference: {fileID: 0}
     - target: {fileID: 8147781086540023461, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
@@ -15675,7 +15675,7 @@ PrefabInstance:
     - target: {fileID: 8816195488331930655, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
       propertyPath: m_TagString
-      value: button
+      value: buttonBola
       objectReference: {fileID: 0}
     - target: {fileID: 9012935732278465322, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
@@ -15685,7 +15685,7 @@ PrefabInstance:
     - target: {fileID: 9012935732278465322, guid: 1a996d13ea4389c4a99d331b74740ab3,
         type: 3}
       propertyPath: m_TagString
-      value: button
+      value: buttonBola
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a996d13ea4389c4a99d331b74740ab3, type: 3}

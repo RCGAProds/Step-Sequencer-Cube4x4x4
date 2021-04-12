@@ -29,6 +29,7 @@ public class PlayButton : MonoBehaviour
 
     public void Play()
     {
+
             GameManager.gM.isPlaying = true;
    
             renderButton.material = playMaterial;

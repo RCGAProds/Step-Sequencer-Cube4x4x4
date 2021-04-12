@@ -32,6 +32,8 @@ public class SelectController : MonoBehaviour
                 out rayHit, Mathf.Infinity, controllersClickable)) //If there's a collision of the raycast on the layer "controllersClickable"
             {
                 Controller controllerScript = rayHit.collider.GetComponent<Controller>();
+                PlayButton scriptButton = rayHit.collider.gameObject.GetComponent<PlayButton>();
+                Generator scriptGenerator = rayHit.collider.gameObject.GetComponent<Generator>();
 
                 if (controllerScript != null) //If there's a Script called "Controller"
                 {
@@ -71,26 +73,24 @@ public class SelectController : MonoBehaviour
                 }
                 if (rayHit.collider.gameObject.CompareTag("button"))
                 {
-                    PlayButton scriptButton = rayHit.collider.gameObject.GetComponent<PlayButton>();
-                    Generator scriptGenerator = rayHit.collider.gameObject.GetComponent<Generator>();
-
                     if (GameManager.gM.isPlaying == false && scriptButton != null)
                     {
                         scriptButton.Play();
                         
                     }
-                    if (GameManager.gM.isPlaying == true && scriptButton != null)
+                    else
                     {
                         scriptButton.Stop();
                     
                     }
+   
+                }
+                if (rayHit.collider.gameObject.CompareTag("buttonBola"))
+                {
                     if (scriptGenerator != null)
                     {
                         scriptGenerator.SpawnController();
                     }
-
-
-
                 }
 
             }
